@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #1d1d1d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fire {
+    position: relative;
+    width: 30rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 10rem;
+}
+.fire-flames {
+    position: relative;
+    display: flex;
+    width: 60%;
+    height: 10rem;
+    bottom: 0;
+    z-index: 2;
+}
+.flame {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    bottom: -2rem;
+    border-radius: 50%;
+    background-image: radial-gradient(rgb(255, 217, 0),
+    rgba(255, 0, 0, 0.952));
+    background-blend-mode: screen;
+    filter: blur(25px);
+    animation: flameUP .2s ease-in infinite;
+}
+.wood-path {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.wood {
+    position: relative;
+    width: 5rem;
+    height: 15rem;
+    background: #552820;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(31, 31, 31, 0.301);
+}
+.one {
+    transform: rotate(15deg);
+    bottom: .5rem;
+}
+.two {
+    left: .5rem;
+    background: #471e15;
+}
+.three {
+    transform: rotate(-15deg);
+    left: 1.5rem;
+    bottom: .5rem;
+}
+@keyframes flameUP {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-30rem) scale(0);
+        opacity: 0;
+        height: 30rem;
+    }
+}
+@keyframes boom {
+    0% {
+        height: 17rem;
+    }
+    30% {
+        height: 15rem;
+    }
+    75% {
+        height: 14rem;
+    }
+    90% {
+        height: 16rem;
+    }
+    100% {
+        height: 17rem;
+    }
+}
+.flame:nth-child(1) {
+    filter: blur(17px);
+    animation: boom 1s infinite;
+    background: rgba(238, 116, 1, 0.952);
+}
+.flame:nth-child(2) {
+    left: 5rem;
+    bottom: -3rem;
+    filter: blur(20px);
+    animation: boom 1s infinite;
+}
+.flame:nth-child(3) {
+    left: 10rem;
+    filter: blur(17px);
+    animation: boom 1s infinite;
+    background: rgba(238, 116, 1, 0.952);
+}
+.flame:nth-child(4) {
+    animation-delay: .5s;
+    top: -6rem;
+    left: 2rem;
+}
+.flame:nth-child(5) {
+    animation-delay: .6s;
+    top: -12rem;
+    left: 5rem;
+}
+
+.flame:nth-child(6) {
+    animation-delay: .9s;
+    top: -6rem;
+    left: 7rem;
+}
+
+.flame:nth-child(7) {
+    animation-delay: 1s;
+    top: -3rem;
+    left: 7rem;
+}
+
+.flame:nth-child(8) {
+    animation-delay: 1.2s;
+    top: -8rem;
+    left: 7rem;
+}
+
+.flame:nth-child(9) {
+    animation-delay: 1.5s;
+    top: -3rem;
+    left: 10rem;
+}
+
+.flame:nth-child(10) {
+    animation-delay: 1s;
+    top: -3rem;
+    left: 2rem;
+}
